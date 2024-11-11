@@ -1,6 +1,6 @@
 # I.T-Something-Something
-# Pico W Temperature-to-Sound Project
-## Project Overview
+## Pico W Temperature-to-Sound Project
+### Project Overview
 
 This project uses a Raspberry Pi Pico W to create a sound that changes frequency based on the temperature. As the temperature increases, the sound frequency produced by the Pico W also increases, creating an audible indication of temperature changes.
 
