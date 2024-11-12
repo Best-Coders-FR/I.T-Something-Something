@@ -19,4 +19,8 @@ Frequency output changes with temperature
 
 ### Purpose
 
-m
+#### - The purpose of this project is to create a simple but intuitive, home audio-based temperature monitoring system using a Raspberry Pi Pico W. By increasing sound frequency with rising temperatures, the project provides a unique way to "hear" temperature changes in real time. This makes it useful in various scenarios, such as:
+
+#### - Overheating Alert: In areas like kitchens, attics, or around appliances, this device can signal rising temperatures that may indicate overheating, potentially preventing fire hazards.
+#### - Cold Snap Notification: In cold environments or unheated rooms, a drop in sound frequency could warn of dangerously low temperatures, helping prevent freezing conditions that might damage pipes or endanger health.
+#### - Room Temperature Monitoring: This project can monitor rooms with sensitive items (like a greenhouse or wine cellar) where temperature fluctuations need to be kept within a specific range.
