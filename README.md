@@ -13,7 +13,7 @@ Frequency output changes with temperature
 
 ###### - Hardware Requirements
 ###### - Raspberry Pi Pico W
-###### - Temperature sensor (e.g., DHT11, DHT22, or built-in sensor if available)
+###### - Temperature sensor (built-in sensor)
 ###### - Speaker or buzzer for sound output
 ###### - Jumper wires for connections
 
