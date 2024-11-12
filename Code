@@ -1,0 +1,79 @@
+import machine 
+import time  
+# Set up the ADC pin for temperature sensor (e.g., LM35 or similar) 
+
+adcpin = 4 
+sensor = machine.ADC(adcpin) 
+
+# Set up the buzzer pin 
+BUZZER_PIN = 15 
+buzzer = machine.PWM(machine.Pin(BUZZER_PIN)) 
+
+def ReadTemperature(): 
+# Read the ADC value from the temperature sensor 
+adc_value = sensor.read_u16() 
+# Convert the ADC value to a voltage 
+volt = (3.3 / 65535) * adc_value 
+# Convert voltage to temperature in Celsius 
+temperature = 27 - (volt - 0.706) / 0.001721 
+return round(temperature, 1) 
+
+ 
+
+def play_continuous_tone(temperature): 
+
+# Map temperature to a frequency range for the buzzer 
+
+min_temp = 10 # Minimum temperature (°C) 
+
+max_temp = 40 # Maximum temperature (°C) 
+
+# Set a frequency range for the buzzer (e.g., 200Hz to 2000Hz) 
+
+min_freq = 200 
+
+max_freq = 2000 
+
+ 
+
+# Map temperature to frequency 
+
+if temperature < min_temp: 
+
+frequency = min_freq 
+
+elif temperature > max_temp: 
+
+frequency = max_freq 
+
+else: 
+
+# Linearly map temperature to frequency 
+
+frequency = min_freq + (temperature - min_temp) * (max_freq - min_freq) / (max_temp - min_temp) 
+
+ 
+
+# Set the buzzer frequency based on the temperature 
+
+buzzer.freq(int(frequency)) 
+
+buzzer.duty_u16(1000) # Set buzzer volume (adjust as needed) 
+
+ 
+
+while True: 
+
+temperature = ReadTemperature() # Get the current temperature 
+
+print(f"Temperature: {temperature}°C") # Print the temperature 
+
+ 
+
+# Play continuous tone that changes pitch based on the temperature 
+
+play_continuous_tone(temperature) 
+
+ 
+
+time.sleep(0.7) # Short delay to avoid overloading the processor 
