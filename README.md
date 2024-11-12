@@ -9,13 +9,13 @@ This project uses a Raspberry Pi Pico W to create a sound that changes frequency
 Real-time temperature monitoring
 Frequency output changes with temperature
 
-### Setup
+### Setup and Requirements
 
-####### - Hardware Requirements
-####### - Raspberry Pi Pico W
-####### - Temperature sensor (e.g., DHT11, DHT22, or built-in sensor if available)
-####### - Speaker or buzzer for sound output
-####### - Jumper wires for connections
+###### - Hardware Requirements
+###### - Raspberry Pi Pico W
+###### - Temperature sensor (e.g., DHT11, DHT22, or built-in sensor if available)
+###### - Speaker or buzzer for sound output
+###### - Jumper wires for connections
 
 ### Purpose
 
